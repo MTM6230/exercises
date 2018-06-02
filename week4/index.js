@@ -3,8 +3,8 @@ const hero = {
   weapons: ['Webbing', 'Guns', 'Laser eyes']
 }
 
-function greeting () {
-  return `Hello, my name is ${hero.name}. I am a hero.`
+function greeting (salutation = 'Hello') {
+  return `${salutation}, my name is ${hero.name}. I am a hero.`
 }
 
 const chooseWeapon = function () {
@@ -12,6 +12,11 @@ const chooseWeapon = function () {
   return hero.weapons[randomNum]
 }
 
-function attack () {
-  return `Attacking with a ${chooseWeapon()}.`
+function attack (number = 1) {
+  const attacks = []
+  for (let i = 0; i < number; i++) {
+    attacks.push(`Attacking with a ${chooseWeapon()}.`)
+  }
+
+  return attacks.join(`\n`)
 }
