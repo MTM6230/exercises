@@ -1,0 +1,30 @@
+.parent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 300px;
+}
+
+.child {
+  flex-grow: 1;
+}
+
+/* B child */
+.child:nth-child(2) {
+  flex-grow: 3;
+  align-self: flex-start;
+}
+
+/* C Child */
+.child:nth-child(3) {
+  order: -1;
+  align-self: flex-end;
+}
+
+/* D Child */
+.child:nth-child(4) {
+  order: 1;
+  align-self: flex-end;
+}
