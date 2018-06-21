@@ -23,11 +23,13 @@ main {
   font-size: 1.2em;
 }
 
-/* Styles to create Complex Layout */
+.wrapper, .section, .row {
+  border: 1px solid red;
+}
+
 .wrapper {
   display: flex;
-  flex-direction: row;
-  align-items: stretch;
+  justify-content: space-between;
 }
 
 .section {
@@ -36,7 +38,7 @@ main {
   flex-grow: 1;
 }
 
-.section:nth-child(1) {
+.section:first-child {
   flex-grow: 2;
 }
 
@@ -50,5 +52,5 @@ main {
 }
 
 .g {
-  flex-grow: 4;
+  flex-grow: 3;
 }
