@@ -1,0 +1,53 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.die {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  margin: 0 25px;
+
+  border: 1px solid #ccc;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.red {
+  background-color: firebrick;
+}
+
+.yellow {
+  background-color: gold;
+}
+
+.green {
+  background-color: green;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.purple {
+  background-color: purple;
+}
+
+.side {
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 5em;
+  font-weight: bold;
+}
