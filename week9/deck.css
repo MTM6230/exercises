@@ -1,0 +1,37 @@
+.deck {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 178px;
+  height: 250px;
+  padding: 10px;
+  margin: 2px;
+
+  background-color: #f7f7f7;
+  font-family: 'BioRhyme', serif;
+  font-size: 2.8rem;
+  line-height: 2.2rem;
+}
+
+.suit {
+  align-self: center;
+}
+
+.number:last-child {
+  text-align: right;
+}
+
+.diamonds, .hearts {
+  color: #DF001E;
+}
+
+.clubs, .spades {
+  color: #24202D;
+}
