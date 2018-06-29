@@ -46,8 +46,25 @@ body {
 }
 
 .side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   color: #fff;
   font-family: Arial, sans-serif;
   font-size: 5em;
   font-weight: bold;
+}
+
+.dot {
+  width: 45px;
+  height: 45px;
+  margin: 12px;
+
+  background-color: #000;
+  border-radius: 50%;
+}
+
+.hide {
+  display: none;
 }
