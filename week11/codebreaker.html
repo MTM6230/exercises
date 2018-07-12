@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Code Breaker</title>
+  <link rel="stylesheet" href="codebreaker.css">
+</head>
+<body>
+  <h1>Code Breaker</h1>
+  <section id="score" class="section score">
+    <div><strong>Tries</strong><br><span id="tries">0</span></div>
+    <div><strong>Correct</strong><br><span id="correct">0</span></div>
+  </section>
+  <section id="board" class="section">
+    <div class="block red" data-color="red"></div>
+    <div class="block red" data-color="red"></div>
+    <div class="block red" data-color="red"></div>
+    <div class="block red" data-color="red"></div>
+  </section>
+  <section id="buttons" class="section">
+    <button id="reset" class="btn reset">Reset Code</button>
+    <button id="submit" class="btn">Submit Code</button>
+  </section>
+
+  <div id="message" class="message">
+    <h2>You Won!</h2>
+  </div>
+  <script src="codebreaker.js"></script>
+</body>
+</html>
