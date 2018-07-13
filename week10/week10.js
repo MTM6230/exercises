@@ -25,16 +25,49 @@ let child = 0
   
 // }, 2010)
 
+const parent = document.getElementById('parent')
+parent.addEventListener('mouseover', function (event) {
+  if (event.target.classList.contains('child')) {
+    event.target.classList.add('grow')
+  }
+})
+
+parent.addEventListener('mouseout', function (event) {
+  if (event.target.classList.contains('child')) {
+    event.target.classList.remove('grow')
+  }
+})
+
+parent.addEventListener('click', function (event) {
+  if (event.target.classList.contains('child')) {
+    event.target.insertAdjacentHTML('afterend', `<a href="#" class="child">${event.target.textContent}</a>`)
+  }
+})
+
 for (const child of children) {
-  child.addEventListener('mouseover', function () {
-    child.classList.add('grow')
-  })
+  // child.addEventListener('mouseover', function () {
+  //   child.classList.add('grow')
+  // })
 
-  child.addEventListener('mouseout', function () {
-    child.classList.remove('grow')
-  })
+  // child.addEventListener('mouseout', function () {
+  //   child.classList.remove('grow')
+  // })
 
-  child.addEventListener('click', function () {
-    child.insertAdjacentHTML('afterend', `<a href="#" class="child">${child.textContent}</a>`)
-  })
+  // child.addEventListener('click', function () {
+  //   child.insertAdjacentHTML('afterend', `<a href="#" class="child">${child.textContent}</a>`)
+  // })
 }
+
+document.addEventListener('keyup', function (event) {
+    if (event.key === 'a' || event.keyCode === 65) {
+      children[0].classList.toggle('grow')
+    } else if (event.key === 'b' || event.keyCode === 66) {
+      children[1].classList.toggle('grow')
+    } else if (event.key === 'c' || event.keyCode === 67) {
+      children[2].classList.toggle('grow')
+    } else if (event.key === 'd' || event.keyCode === 68) {
+      children[3].classList.toggle('grow')
+    }
+    console.log('Key', event.key)
+    console.log('KeyCode', event.keyCode)
+})
