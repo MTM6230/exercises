@@ -1,0 +1,148 @@
+/* BASE STYLES */
+body {
+  font-family: sans-serif;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+.parent {
+  display: flex;
+  flex-wrap: wrap;
+  border: 3px dashed #000;
+}
+
+.parent:nth-child(n + 2) {
+  justify-content: center;
+  align-items: center;
+  margin: 25px 0;
+  height: 150px;
+}
+
+.child {
+  padding: 45px;
+
+  font-family: sans-serif;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.child:nth-child(1), .child:nth-child(5n + 1) {
+  background-color: #AFD0BF;
+}
+
+.child:nth-child(2), .child:nth-child(5n + 2) {
+  background-color: #E8D2AE;
+}
+
+.child:nth-child(3), .child:nth-child(5n + 3) {
+  background-color: #9BD1E5;
+}
+
+.child:nth-child(4), .child:nth-child(5n + 4) {
+  background-color: #CB8589;
+}
+
+.child:nth-child(5), .child:nth-child(5n + 5) {
+  background-color: #A1B5D8;
+}
+
+.grow {
+  flex-grow: 1;
+}
+
+.btn {
+  position: relative;
+
+  width: 175px;
+  height: 50px;
+
+  background-color: cadetblue;
+  border: 3px solid cadetblue;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 1.1em;
+  transition: 0.3s;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 45px;
+  height: 25px;
+}
+
+.menu-bar {
+  height: 4px;
+  background-color: #333;
+}
+
+.bar {
+  width: 10px;
+  height: 100px;
+  margin: 0 1px;
+
+  background-color: red;
+}
+
+.child {
+  transition: 0.65s;
+}
+
+.child:hover {
+  flex-grow: 2;
+}
+
+.child:active {
+  background-color: red;
+  transition-delay: 0.5s;
+}
+
+.child:first-child:hover {
+  transform: translate(0, 100px);
+  transition: flex-grow 0.65s, transform 1s 0.65s;
+}
+
+.child:nth-child(2):hover {
+  flex-grow: 1;
+  transform: scale(2, 1);
+}
+
+.child:nth-child(3):hover {
+  transform: rotate(-2.5turn);
+  transition: 2s;
+}
+
+.child:nth-child(4):hover {
+  transform: skew(-15deg);
+}
+
+.btn {
+  transition: background-color 0.65s ease-out, color 0.35s;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: cadetblue;
+}
+
+.menu-bar {
+  transition: 0.4s ease-out;
+}
+
+.menu:hover .menu-bar:first-child {
+  transform: rotate(225deg) translate(-7px, -8px);
+}
+
+.menu:hover .menu-bar:last-child {
+  transform: rotate(-225deg) translate(-7px, 8px);
+}
+
+.menu:hover .menu-bar:nth-child(2) {
+  opacity: 0;
+  transition: 0.2s 0.2s
+}
